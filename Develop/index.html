@@ -37,7 +37,7 @@
         <div class="col-2">
           9AM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -49,7 +49,7 @@
         <div class="col-2">
           10AM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -61,7 +61,7 @@
         <div class="col-2">
           11AM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -73,7 +73,7 @@
         <div class="col-2">
           12PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -85,7 +85,7 @@
         <div class="col-2">
           1PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -97,7 +97,7 @@
         <div class="col-2">
           2PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -109,7 +109,7 @@
         <div class="col-2">
           3PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -121,7 +121,7 @@
         <div class="col-2">
           4PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -133,7 +133,7 @@
         <div class="col-2">
           5PM
         </div>
-        <div class="col">
+        <div class="col textArea">
           2 of 3
         </div>
         <div class="col-2">
@@ -152,19 +152,36 @@
     <script>
   var now = moment().format('MMMM Do YYYY, h:mm:ss a');
   var display = $('#currentDay')
+  var currentHour = moment().hour()
   display.text(now);
+  function pastPresentFuture (){
   $(".row").each(function(){
-var hour = $(this).attr(".class")
-//var 
-//var rSlice = $(".row").slice("row ")
+var hour = $(this).attr("class").split("row")[1]
+if (currentHour>hour) {
+$(this).addClass("past")
+}
+else if (currentHour==hour) {
+  $(this).removeClass("past")
+  $(this).addClass("present")
+}
+else {$(this).removeClass("present")
+$(this).addClass("future")
+{$(this).removeClass("past")
+}
 
-//if
+
+
+ 
+
+
+//console.log(this)
+
 })  
-  console.log(now)
+}
 
+  pastPresentFuture()
     //loop over each blocks using this.attb(.class)
    
-
 
 
 
