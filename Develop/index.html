@@ -32,7 +32,7 @@
     </header>
     <div class="container">
       <div class="row 9" >
-        <div class="col-2">
+        <div class="col-2 hour">
           9AM
         </div>
         <textarea id="fieldNine" class="col">
@@ -43,10 +43,10 @@
         </button>
       </div>
       <div class="row 10">
-        <div class="col-2">
+        <div class="col-2 hour">
           10AM
         </div>
-        <textarea class="col textArea">
+        <textarea id="fieldTen" class="col">
           2 of 3
         </textarea>
         <button class="col-2 saveBtn">
@@ -55,38 +55,41 @@
        <!--</div>-->
     </div>
       <div class="row 11">
-        <div class="col-2">
+        <div class="col-2 hour">
           11AM
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldEleven" class="col">
           2 of 3
-        </div>
-        <div class="col-2">
+          </textarea>
+          <button class="col-2 saveBtn">
           3 of 3
+          </button>
         </div>
       <!--</div>-->
     </div>
       <div class="row 12">
-        <div class="col-2">
-          12PM
+        <div class="col-2 hour">
+          Noon
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldTwelve" class="col">
           2 of 3
-        </div>
-        <div class="col-2">
+          </textarea>
+                <button class="col-2 saveBtn">
           3 of 3
+          </button>
         </div>
-      <!--</div>-->
-    </div>
+        </div>
       <div class="row 13">
         <div class="col-2 hour">
           1PM
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldOne" class="col">
           2 of 3
-        </div>
-        <div class="col-2 hour">
+      </textarea>
+        
+        <button class="col-2 saveBtn">
           3 of 3
+          </button>
         </div>
       <!--</div>-->
     </div>
@@ -94,11 +97,13 @@
         <div class="col-2 hour">
           2PM
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldTwo" class="col">
           2 of 3
-        </div>
-        <div class="col-2 hour">
+        </textarea>
+        
+        <button class="col-2 saveBtn">
           3 of 3
+        </button>
         </div>
       <!--</div>-->
     </div>
@@ -106,11 +111,13 @@
         <div class="col-2 hour">
           3PM
         </div>
-        <div class="col textArea>">
+        <textarea id="fieldThree" class="col">
           2 of 3
-        </div>
-        <div class="col-2 hour">
+        </textarea>
+        
+        <button class="col-2 saveBtn">
           3 of 3
+        </button>
         </div>
       <!--</div>-->
     </div>
@@ -118,29 +125,31 @@
         <div class="col-2 hour">
           4PM
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldFour" class="col">
           2 of 3
-        </div>
-        <div class="col-2 hour">
+        </textarea>
+        
+        <button class="col-2 saveBtn">
           3 of 3
+        </button>
         </div>
-      <!--</div>-->
     </div>
       <div class="row 17">
         <div class="col-2 hour">
           5PM
         </div>
-        <div class="col <textArea>">
+        <textarea id="fieldFive" class="col">
           2 of 3
-        </div>
-        <div class="col-2 hour">
+        </textarea>
+        
+        <button class="col-2 saveBtn">
           3 of 3
+        </button>
         </div>
-      <!--</div>-->
+     
     </div>
       
-    </div>
-       
+           
     </div>
 
 
@@ -187,6 +196,15 @@ localStorage.setItem(parentAttr, clickSave)
 }
 )
 $("#fieldNine").val(localStorage.getItem("9 past"));
+$("#fieldTen").val(localStorage.getItem("10 past"));
+$("#fieldEleven").val(localStorage.getItem("11 past"));
+$("#fieldTwelve").val(localStorage.getItem("12 past"));
+$("#fieldOne").val(localStorage.getItem("1 past"));
+$("#fieldTwo").val(localStorage.getItem("2 past"));
+$("#fieldThree").val(localStorage.getItem("3 past"));
+$("#fieldFour").val(localStorage.getItem("4 past"));
+$("#fieldFive").val(localStorage.getItem("5 past"));
+
 
 
    
