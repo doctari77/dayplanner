@@ -31,7 +31,7 @@
   
     </header>
     <div class="container">
-      <div class="row 9" >
+      <div id= "hour-9" class="row 9">        
         <div class="col-2 hour">
           9AM
         </div>
@@ -42,7 +42,7 @@
           schedule
         </button>
       </div>
-      <div class="row 10">
+      <div id= "hour-10" class="row 10">
         <div class="col-2 hour">
           10AM
         </div>
@@ -52,9 +52,8 @@
         <button class="col-2 saveBtn">
           schedule
         </button>
-       <!--</div>-->
-    </div>
-      <div class="row 11">
+        </div>
+      <div id= "hour-11" class="row 11">
         <div class="col-2 hour">
           11AM
         </div>
@@ -64,10 +63,8 @@
           <button class="col-2 saveBtn">
           schedule
           </button>
-        <!--</div>-->
-      <!--</div>-->
-    </div>
-      <div class="row 12">
+          </div>
+      <div id= "hour-12"class="row 12">
         <div class="col-2 hour">
           Noon
         </div>
@@ -77,9 +74,8 @@
           <button class="col-2 saveBtn">
           schedule
           </button>
-        </div>
-        
-      <div class="row 13">
+        </div>        
+      <div id="hour-1" class="row 13">
         <div class="col-2 hour">
           1PM
         </div>
@@ -90,9 +86,7 @@
           schedule          
           </button>
         </div>
-      <!--</div>-->
-                    <!--</div>-->
-      <div class="row 14">
+        <div id="hour-2" class="row 14">
         <div class="col-2 hour">
           2PM
         </div>
@@ -102,24 +96,19 @@
         <button class="col-2 saveBtn">
           schedule
         </button>
-        <!--</div>-->
-      <!--</div>-->
-    </div>
-      <div class="row 15">
+        </div>
+      <div id="hour-3" class="row 15">
         <div class="col-2 hour">
           3PM
         </div>
         <textarea id="fieldThree" class="col">
           2 of 3
-        </textarea>
-        
+        </textarea>        
         <button class="col-2 saveBtn">
           schedule
         </button>
-        <!--</div>-->
-      <!--</div>-->
-    </div>
-      <div class="row 16">
+        </div>
+      <div id="hour-4" class="row 16">
         <div class="col-2 hour">
           4PM
         </div>
@@ -129,9 +118,8 @@
         <button class="col-2 saveBtn">
           schedule
         </button>
-        <!--</div>-->
-    </div>
-      <div class="row 17">
+        </div>
+      <div id="hour-5" class="row 17">
         <div class="col-2 hour">
           5PM
         </div>
@@ -141,11 +129,8 @@
         <button class="col-2 saveBtn saveBtn i:hover">
           schedule
         </button>
-        <!--</div>-->
-     
-    </div>
-      
-           
+        </div>
+              
     
 
 
@@ -182,24 +167,24 @@ setInterval(() => {
   pastPresentFuture
 }, 30000);
 $(".saveBtn").on("click", function(){
-$("")
+
 var clickSave = $(this).siblings(".col").val()
 
-var parentAttr =$(this).parent().attr("class").split("row")[1]
+var parentAttr =$(this).parent().attr("id").split("-")[1]
 localStorage.setItem(parentAttr, clickSave)
 
 
 }
 )
 $("#fieldNine").val(localStorage.getItem("9"));
-$("#fieldTen").val(localStorage.getItem("10 past"));
-$("#fieldEleven").val(localStorage.getItem("11 past"));
-$("#fieldTwelve").val(localStorage.getItem("12 past"));
-$("#fieldOne").val(localStorage.getItem("1 past"));
-$("#fieldTwo").val(localStorage.getItem("2 past"));
-$("#fieldThree").val(localStorage.getItem("3 past"));
-$("#fieldFour").val(localStorage.getItem("4 past"));
-$("#fieldFive").val(localStorage.getItem("5 past"));
+$("#fieldTen").val(localStorage.getItem("10"));
+$("#fieldEleven").val(localStorage.getItem("11"));
+$("#fieldTwelve").val(localStorage.getItem("12"));
+$("#fieldOne").val(localStorage.getItem("1"));
+$("#fieldTwo").val(localStorage.getItem("2"));
+$("#fieldThree").val(localStorage.getItem("3"));
+$("#fieldFour").val(localStorage.getItem("4"));
+$("#fieldFive").val(localStorage.getItem("5"));
 
 
 
